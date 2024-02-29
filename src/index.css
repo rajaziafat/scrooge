@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .wrapper {
+    @apply flex w-full justify-start items-center flex-col;
+  }
+  .contain {
+    @apply flex w-[90%] max-w-[1600px];
+  }
+  body {
+    @apply bg-body;
+  }
+  body,
+  html {
+    @apply overflow-x-hidden;
+  }
+}
+.grab1 {
+  transform: rotateY(-4deg) rotateX(-3deg) perspective(400px);
+}
+.teamBorder {
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 22px,
+      #af8aff 22px,
+      #af8aff 25px,
+      transparent 25px
+    ),
+    linear-gradient(to right, #af8aff, #af8aff),
+    radial-gradient(
+      circle at 0% 100%,
+      transparent 22px,
+      #af8aff 22px,
+      #af8aff 25px,
+      transparent 25px
+    ),
+    linear-gradient(to bottom, #af8aff, #ff81fa),
+    radial-gradient(
+      circle at 0% 0%,
+      transparent 22px,
+      #ff81fa 22px,
+      #ff81fa 25px,
+      transparent 25px
+    ),
+    linear-gradient(to left, #ff81fa, #ff81fa),
+    radial-gradient(
+      circle at 100% 0%,
+      transparent 22px,
+      #ff81fa 22px,
+      #ff81fa 25px,
+      transparent 25px
+    ),
+    linear-gradient(to top, #ff81fa, #af8aff);
+  background-size: 25px 25px, calc(100% - 50px) 3px, 25px 25px,
+    3px calc(100% - 50px);
+  background-position: top left, top center, top right, center right,
+    bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+}
+.roadmapBorder {
+  background: linear-gradient(white 0 0) padding-box,
+    linear-gradient(90deg, #ffb02c 0%, #fc1b5e 106.47%) border-box;
+}
